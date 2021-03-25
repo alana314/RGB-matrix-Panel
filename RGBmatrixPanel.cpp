@@ -84,6 +84,8 @@ performance and/or lower CPU utilization:
 // are even an actual need.
 static RGBmatrixPanel *activePanel = NULL;
 
+#define swap(x, y) { int16_t tmp = x; x = y; y = tmp; }
+
 // Code common to both the 16x32 and 32x32 constructors:
 void RGBmatrixPanel::init(uint8_t rows, uint8_t a, uint8_t b, uint8_t c,
   uint8_t sclk, uint8_t latch, uint8_t oe, boolean dbuf, uint8_t pwidth) {
